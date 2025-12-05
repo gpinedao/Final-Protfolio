@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="Styles/site.css">
+    <link rel="stylesheet" href="Styles/customerReviews.css">
+  </head>
+  <body>
+    
+      <header>
+        <div>
+            <img src="Images/PCFC_Logo-09.jpg" alt="P Logo">
+        </div>
+        <div>
+            <h1>Pacifico</h1>
+            <p>LATIN AMERICAN CUISINE</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="PacificoIndex.html">Home</a></li>
+            <li><a href="OurMenu.html">Our Menu</a></li>
+            <li><a href="ChefSpecials.html">Chef's Specials</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="#aboutus">About Us</a>
+                <ul>
+                    <li>
+                        <a href="Contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="CustomerReviews.html">Customer Reviews</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+      <h1>Customer Reviews</h1>
+      <p>See what our customers have to say about Pacifico!</p>
+      <section class="reviews-section">
+        <div class="reviews-container">
+          <div class="review">
+            <h3>Sandra Salazar</h3>
+            <div class="stars">★★★★★</div>
+            <p>The food was absolutely amazing, and the ambiance was perfect. Highly recommend!</p>
+          </div>
+          <div class="review">
+            <h3>Preeti Singh</h3>
+            <div class="stars">★★★★☆</div>
+            <p>Great experience overall, though the service was a bit slow. Will come back for the Calentao!</p>
+          </div>
+          <div class="review">
+            <h3>Alejandro Gelvez</h3>
+            <div class="stars">★★★★★</div>
+            <p>Best ceviche I’ve ever tasted. The chef is truly talented!</p>
+          </div>
+          <div class="review">
+            <h3>Roberto Oliveira</h3>
+            <div class="stars">★★★★★</div>
+            <p>The ambiance was cozy yet sophisticated, making it an ideal spot for both casual dinners and special occasions. I can’t wait to come back and explore more of the menu!</p>
+          </div>
+        </div>
+        <section class="review-form">
+          <h2>Submit Your Review</h2>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5" selected>★★★★★</option>
+            </select>
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Write your comments here..."></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </section>
+    <footer>
+        <p>© 2024 Pacifico | All rights reserved.</p>
+        <p>101 Hyde St, San Francisco, CA 94102, United States | (123) 456-7890</p>
+      </footer>
+  </body>
+</html>

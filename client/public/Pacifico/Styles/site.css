@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1342A5;
+    color: white;
+    background-image: url('../Images/PCFC_Ilustracion_Beige-02.png'), url('../Images/PCFC_Ilustracion_Beige-03.png');
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header div {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        background-size: 100px 100px;
+    }
+
+    header div {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+nav {
+    text-align: center;
+    background-color: #FFb3A9;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    color: #1342A5;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #F1EfE3;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #FFb3A9;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 200px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #1342A5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header div {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

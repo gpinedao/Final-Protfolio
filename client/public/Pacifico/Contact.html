@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Styles/site.css">
+    <link rel="stylesheet" href="Styles/contact.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="Images/PCFC_Logo-09.jpg" alt="P Logo">
+        </div>
+        <div>
+            <h1>Pacifico</h1>
+            <p>LATIN AMERICAN CUISINE</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="PacificoIndex.html">Home</a></li>
+            <li><a href="OurMenu.html">Our Menu</a></li>
+            <li><a href="ChefSpecials.html">Chef's Specials</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="#aboutus">About Us</a>
+                <ul>
+                    <li>
+                        <a href="Contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="CustomerReviews.html">Customer Reviews</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Make enquiries or reservations below.</p>
+
+    <section class="form-section">
+        <h2>Contact Form</h2>
+        <form>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" placeholder="Number of guests" required>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4"
+                placeholder="Write your comments or requests here..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="map-section">
+        <h2>Our Location</h2>
+        <p>101 Hyde St, San Francisco, CA 94102, United States</p>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50453.68981726778!2d-122.49217271804808!3d37.78170504295941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581b73138b107%3A0x21a29285f54a8364!2sLa%20Cocina%20on%20Hyde!5e0!3m2!1sen!2sca!4v1733894821006!5m2!1sen!2sca" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </section>
+    <footer>
+        <p>© 2024 Pacifico | All rights reserved.</p>
+        <p>101 Hyde St, San Francisco, CA 94102, United States | (123) 456-7890</p>
+      </footer>
+</body>
+
+</html>

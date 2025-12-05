@@ -1,0 +1,45 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d; /* dark background */
+  color: #00ff00; /* green text like terminal */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Container for page content */
+.app-container {
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #00ff00;
+}
+
+/* Links */
+a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #33ff33;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* Buttons (optional global style) */
+button, .btn {
+  background-color: #00ff00;
+  color: #0d0d0d;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #33ff33;
+}

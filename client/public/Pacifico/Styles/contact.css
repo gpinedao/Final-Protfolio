@@ -1,0 +1,56 @@
+.form-section {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-section h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-section button {
+    background-color: #004d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #003838;
+}
+
+.map-section {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 5px;
+}

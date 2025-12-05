@@ -1,0 +1,27 @@
+section.description {
+    padding: 50px 20px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column.image {
+    text-align: center;
+}
+
+.column.text {
+    text-align: justify;
+}
