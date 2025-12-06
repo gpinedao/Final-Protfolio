@@ -15,6 +15,10 @@ const About = () => {
         I enjoy continuously learning and exploring new technologies, frameworks, and best practices to stay up to date in the ever-evolving world of web development. Beyond writing code, I love turning ideas into functional projects that solve real-world problems and add meaningful value to people’s lives.
         Whether it’s front-end development, back-end logic, or full-stack projects, I thrive on tackling challenges, collaborating with others, and pushing myself to improve with every project I build.
       </p>
+
+      <p style={{ color: "#0077cc", fontWeight: "bold" }}>
+  This paragraph was added to demonstrate CI/CD deployment using GitHub and Render.
+</p>
       
 {/* Link to view the resume PDF, opens in a new tab securely */}
 <a href={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank" rel="noopener noreferrer">
