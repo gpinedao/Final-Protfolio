@@ -44,7 +44,7 @@ const Education = () => {
   useEffect(() => {
     const fetchEducations = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/educations', {
+        const res = await axios.get('https://final-protfolio.onrender.com/api/educations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setEducations(res.data);
@@ -64,7 +64,7 @@ const Education = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/educations',
+        'https://final-protfolio.onrender.com/api/educations',
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -80,7 +80,7 @@ const Education = () => {
   // ✅ Delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/educations/${id}`, {
+      await axios.delete(`https://final-protfolio.onrender.com/api/educations/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -108,7 +108,7 @@ const Education = () => {
   const handleUpdate = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/educations/${id}`,
+        `https://final-protfolio.onrender.com/api/educations/${id}`,
         editData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
