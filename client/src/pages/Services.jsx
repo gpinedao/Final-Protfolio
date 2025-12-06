@@ -26,14 +26,14 @@ const Services = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/services")
+      .get("https://final-protfolio.onrender.com/api/services")
       .then((res) => setServices(res.data))
       .catch((err) => console.error("Error fetching services:", err));
   }, []);
 
   const createService = () => {
     axios.post(
-      "http://localhost:5000/api/services",
+      "https://final-protfolio.onrender.com/api/services",
       {
         title: formData.title,
         description: formData.description,
@@ -60,7 +60,7 @@ const Services = () => {
 
   const updateService = () => {
     axios.put(
-      `http://localhost:5000/api/services/${currentService._id}`,
+      `https://final-protfolio.onrender.com/api/services/${currentService._id}`,
       {
         title: formData.title,
         description: formData.description,
@@ -83,7 +83,7 @@ const Services = () => {
     if (!window.confirm("Delete this service?")) return;
 
     axios.delete(
-      `http://localhost:5000/api/services/${id}`,
+      `https://final-protfolio.onrender.com/api/services/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
