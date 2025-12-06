@@ -11,6 +11,7 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
       const res = await axios.post(
         'https://final-protfolio.onrender.com/api/auth/login',
@@ -18,24 +19,40 @@ function SignIn() {
         { headers: { 'Content-Type': 'application/json' } }
       );
 
+      // ✅ Validate token
       if (!res.data?.token) {
         alert('Login response missing token');
         return;
       }
 
+      // ✅ Save token
       localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user || {}));
+
+      // ✅ Save user object (if provided)
+      if (res.data.user) {
+        localStorage.setItem('user', JSON.stringify(res.data.user));
+
+        // ✅ Save role (admin or user)
+        localStorage.setItem('role', res.data.user.role);
+      } else {
+        // ✅ Fallback for safety
+        localStorage.setItem('user', '{}');
+        localStorage.setItem('role', 'user');
+      }
 
       console.log('Login successful, token:', res.data.token);
-      navigate('/'); // redirect to home or any protected page
+      navigate('/');
+
     } catch (err) {
       const msg =
+        err.response?.data?.msg ||
         err.response?.data?.message ||
-        err.response?.data ||
         err.message ||
         'Login failed';
+
       console.error('Login failed:', msg);
       alert(msg);
+
     } finally {
       setLoading(false);
     }

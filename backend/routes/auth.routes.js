@@ -4,7 +4,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user.model');
 
-// POST /api/auth/register
+const SECRET_KEY = process.env.JWT_SECRET || 'yourSecretKey';
+
+// ✅ POST /api/auth/register
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -12,7 +14,7 @@ router.post('/register', async (req, res) => {
     let user = await User.findOne({ email });
     if (user) return res.status(400).json({ msg: 'User already exists' });
 
-    // ✅ Hash password
+    // Hash password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -27,13 +29,14 @@ router.post('/register', async (req, res) => {
     await user.save();
 
     res.json({ msg: 'User registered successfully' });
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: 'Server error' });
   }
 });
 
-// POST /api/auth/login
+// ✅ POST /api/auth/login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -44,20 +47,31 @@ router.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
 
+    // ✅ Sign token with role included
     const token = jwt.sign(
       { id: user._id, role: user.role },
-      'yourSecretKey',
+      SECRET_KEY,
       { expiresIn: '1h' }
     );
 
-    res.json({ token });
+    // ✅ Return token + user info (frontend needs this)
+    res.json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role
+      }
+    });
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: 'Server error' });
   }
 });
 
-// GET /api/auth/signout
+// ✅ GET /api/auth/signout
 router.get('/signout', (req, res) => {
   res.json({ msg: 'User signed out successfully' });
 });
